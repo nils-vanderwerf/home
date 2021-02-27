@@ -15,3 +15,11 @@ body {
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
+
+/*Section 1 Changes*/
+#section1 {
+    background: #3366CC;
+    height: 100vh;
+    background: -webkit-linear-gradient(top, #3366CC, #000066);
+    background: linear-gradient(top, #3366CC, #000066);
+}
