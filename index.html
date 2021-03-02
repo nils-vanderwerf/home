@@ -3,25 +3,70 @@
     <head>
         <title>Nils Portfolio Website</title>
         <!--Add CSS styles-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="/Font-Awesome/css/fontawesome.min.css">
         <link rel="stylesheet" href="style.css">
 
         <!--Font Awesome script-->
-        <script src="https://kit.fontawesome.com/e8d7a1cd43.js" crossorigin="anonymous"></script>
+        <!--<script src="https://kit.fontawesome.com/e8d7a1cd43.js" crossorigin="anonymous"></script>-->
     </head>
     <body>
-        <h>Nils van der Werf</h1>
-        <div id="section1" class="outer-container">
-            <section id="logo-container" class="inner-container">
+        <section id="section1-logo" class="outer-container">
+            <div class="inner-container col-xs-12 col-sm-9 col-md-8">
                 <img id="logo" src="images/stacked-name.png" alt="Stacked Name Logo">
-            </section>
-
-            <div id="my-titles">
-                <span>Software & Website Developer</span>
-                <span>Graphic Designer</span>
-                <span><script src="https://kit.fontawesome.com/e8d7a1cd43.js" crossorigin="anonymous"></script>
-                </span>
+                <ul id="my-titles">
+                    <li>Software & Website Developer</li>
+                    <li>Graphic Designer</li>
+                    <span><script src="https://kit.fontawesome.com/e8d7a1cd43.js" crossorigin="anonymous"></script><span></span>
+                </ul>
             </div>
+            
+            </div>
+        </section>
+        
+        <section id="section2-bio" class="outer-container">
+            <div id="bio" class="inner-container col-sm-9 col-md-8">
+                <h1>About Me</h1>
+                <p>Well hello there future employers! My name is Nils, I'm a 28-year-old aspiring software developer studying a 5-month full time intensive programming course.</p>
+                <p> I have 2 years' past experience as a web designer and previous knowledge of HTML, CSS and Javascript, which I studied at the University of Canberra. I also have a degree from the same uni in graphic design, where I studied UX design throughout my course and have a good sensibility for aesthetics and layout.</p>
+                <p>In the course, I will learn Ruby, Ruby on Rails, React and gain plenty of experience using the command line and working on Github.</p>
+                <p>I am inspired to solve problems with my programming skills and seeing what's possible.</p>
+                <p>I look forward to the prospect of working together!</p>
+                <p><a id="about-me-link" href="">See my work</a> or drop me a line below:</p>
+                <p>Email Me: <a href="n.vanderw.92@gmail.com">n.vanderw.92@gmail.com</a></p>
+                <p>Mobile: <a href="n.vanderw.92@gmail.com">0418 202 359</a></p>
+        </section>
+          
+        <section id="section2-work" class="outer-container">
+            <div id="my-work" class="inner-container col-sm-9 col-md-8">
+                <section id="branding-work">
+                    <div><!--Branding piece 1--></div>
+                    <div><!--Branding piece 2--></div>
+                    <div><!--Branding piece 3--></div>
+                </section>
+
+                <section id="illustration-work">
+                    <div><!--illustration piece 1--></div>
+                    <div><!--Illustration piece 2--></div>
+                    <div><!--Illustration piece 3--></div>
+                </section>
+
+                <section id="edm-work">
+                    <div><!--edm-1--></div>
+                    <div><!--edm-2--></div>
+                    <div><!--edm-3--></div>
+                </section>
+
+                <section id="trade-show-work">
+                    <div><!--trade show-1--></div>
+                    <div><!--trade show-2--></div>
+                    <div><!--trade show 3--></div>
+                </section>
+            </ul>
+        </section>
+           
         </div>
         
         <script src="script.js"></script>

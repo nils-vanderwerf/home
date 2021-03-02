@@ -1,5 +1,10 @@
 /*Reset default margins and padding */
+html {
+    font-size: 20px;
+}
+
 body {
+    font-family: 'Noto Sans JP', 'Helvetica', arial, sans-serif;
     margin: 0;
     padding: 0;
 }
@@ -12,8 +17,13 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+.inner-container {
+    width: 100%;
+}
 .logo-container {
     position: absolute;
+    text-align: center;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -21,12 +31,34 @@ body {
 
 #logo {
     width: 12rem;
+    text-align: center;
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /*Section 1 Changes*/
-#section1 {
+#section1-logo {
     background: #3366CC;
     height: 100vh;
     background: -webkit-linear-gradient(top, #3366CC, #000066);
     background: linear-gradient(top, #3366CC, #000066);
+}
+
+ul#my-titles {
+    color: #fff;
+    text-align: center;
+    list-style: none;
+    clear: both; 
+    float: none; 
+    width: 100%;
+    padding-left: 0;
+    position: absolute;
+    text-align: center;
+    left: 50%;
+    transform: translateY(-50%);
+    bottom: 20%;
 }
