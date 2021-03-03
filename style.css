@@ -60,9 +60,17 @@ ul#my-titles li {
     list-style: none;
 }
 
+/*Category names sit site by side*/
+.work-category h3 {
+    display: inline-block
+}
+
 /*Display work in a grid*/
-.work-wrapper {
+.work-category {
     display: none;
+}
+
+.work-wrapper {
     margin: 90px 0;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -75,7 +83,7 @@ ul#my-titles li {
     max-width: 100%;
 }
 
-.work-wrapper.active {
+.work-category.active {
     display: grid;
 }
 
@@ -86,7 +94,7 @@ ul#my-titles li {
     max-width: 100%;
 }
 
-.work-wrapper div.first {
+.work-category div.first {
     clear: both;
 }
 
@@ -96,7 +104,7 @@ section#branding-work {
     padding-top: 0;
 }
 
-h3#branding-header {
+.work-category#branding {
     padding-top: 90px;
 }
 
