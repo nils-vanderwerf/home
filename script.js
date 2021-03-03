@@ -1,64 +1,71 @@
 
 //store all links in a variable
 let allLinks= document.querySelectorAll('.clickable-link');
-console.log(allLinks);
 
 allLinks.forEach(function(link){
     link.addEventListener('click', function(event) {
       
-        //If it contains the class of active, remove it, to ensure only one element has the class
-        if (this.classList.contains('active')) {
-            this.classList.remove('active');
-        //
-        } 
+        //Remove active class of previously clicked elements
+        const removeActiveClass = document.getElementsByClassName('clickable-link'); 
+        const divsToHide = document.getElementsByClassName("all-work"); 
 
-        //Add class of active to clicked element
-        this.classList.add('active');
+        for(var i = 0; i < removeActiveClass.length; i++){
+            removeActiveClass[i].classList.remove("active");
+        }
 
-        //Grab the id of clicked element
-        let thisID = this.id;
-        console.log(thisID);
+        //Hide all pieces of work before showing again 
+        for(var i = 0; i < divsToHide.length; i++){
+            divsToHide[i].style.display = "none";
+        }
 
-        //Use the function to set display to visible/invisible based on link that what what clicked on
-        switch(thisID) {
-            case "all-links":
-                let divsToShow = document.getElementsByClassName("work-category"); //collect all work sections in an array
-                for(var i = 0; i < divsToShow.length; i++){
-                    divsToShow[i].style.display = "block"; 
+        //Add active class to clicked element 
+        this.classList.add("active");
+
+        //Viable holding divs to show lin the following switch statement, using a 'for' loop
+        let divsToShow; 
+
+        //Get the id of the element that was clicked on
+        switch(this.id) {
+            case 'all-links':
+                console.log('all-links was selected');
+                divsToShow = document.getElementsByClassName("all-work"); //show all pieces of work
+                for(var i = 0; i < divsToShow.length; i++) {
+                    divsToShow[i].style.display = "block";
                 }
-
                 break;
-            case "branding-link":
-                switchVisibility("branding");
+            case 'branding-link':
+                console.log('all-links was selected');
+                divsToShow = document.getElementsByClassName("branding"); //show all branding pieces of work
+                for(var i = 0; i < divsToShow.length; i++) {
+                    divsToShow[i].style.display = "block";
+                }
                 break;
 
-            case "illustration-link":
-                switchVisibility('illustration');
+            case 'illustration-link':
+                divsToShow = document.getElementsByClassName("illustration"); //show all branding pieces of work
+                for(var i = 0; i < divsToShow.length; i++) {
+                    divsToShow[i].style.display = "block";
+                }
                 break;
 
             case "email-link":
-                switchVisibility('edm');
+                divsToShow = document.getElementsByClassName("edm"); //collect all work sections in an array
+                for(var i = 0; i < divsToShow.length; i++) {
+                    divsToShow[i].style.display = "block";
+                };
                 break;
 
             case "trade-show-link":
-                switchVisibility('trade-show');
+                divsToShow = document.getElementsByClassName("trade-show"); //collect all work sections in an array
+                for(var i = 0; i < divsToShow.length; i++) {
+                    divsToShow[i].style.display = "block";
+                };
                 break;
             }
         
             }); 
     });
 
-        function switchVisibility(clickedID) {
-
-            let divsToHide = document.getElementsByClassName("work-category"); //collect all work sections in an array
-            for(var i = 0; i < divsToHide.length; i++){
-                divsToHide[i].style.display = "none";
-            }
-
-            activeElement = document.getElementById(clickedID);
-            activeElement.style.display = "block";
-            return;
-        }
     
 /*allLinks.addEventListener('click', function(event) {
     event.preventDefault();

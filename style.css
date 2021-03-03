@@ -53,6 +53,7 @@ body {
 /*List of my qualifications*/
 ul#my-titles {
     padding-left: 0;
+    padding-top: 30px;
 }
 ul#my-titles li {
     color: #fff;
@@ -72,7 +73,7 @@ work-category {
 }
 */
 
-.work-wrapper {
+#work-wrapper {
     display: grid;
     margin: 90px 0;
     grid-template-columns: repeat(4, 1fr);
@@ -88,12 +89,12 @@ work-category {
 
 
 /*Styling on work images */
-.work-wrapper div img {
+#work-wrapper div img {
     width: 100%;
     max-width: 100%;
 }
 
-.work-category div.first {
+.work-category {
     clear: both;
 }
 
@@ -103,35 +104,52 @@ section#branding-work {
     padding-top: 0;
 }
 
-.clickable-link {
-color: #4E98D9;
-padding-right: 20px;
+#clickable-links a.clickable-link {
+color: #049DBF;
+padding-bottom: 5px;
+margin-right: 20px;
+line-height: 2; /*Stops links collapsing into each other if they go onto next line;*/
 }
 
-.clickable-link {
-    text-decoration: underline;
+#clickable-links a.clickable-link:hover {
+    cursor: hand;
+    color: #02758f;
+}
+#clickable-links a.clickable-link.active {
+    color:#02758f;
+    border-bottom: solid 3px #02758f;
 }
 
 @media all and (max-width: 1024px) {
-    .work-wrapper {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(400px, auto);
+    
+    #work-wrapper {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(400px, auto);
     }
 }
 
 @media all and (max-width: 768px) {
-    .work-wrapper {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(400px, auto);
-}
+    #work-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(400px, auto);
+    }
 }
 
 @media all and (max-width: 600px) {
-    .work-wrapper {
-    grid-template-columns: repeat(1, 1fr);
-    gap: 10px;
-    grid-auto-rows: minmax(400px, auto);
-}
+    #work-wrapper {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+        grid-auto-rows: minmax(400px, auto);
+    }
+
+    #clickable-links {
+        margin: auto;
+        max-width: 80%;
+    }
+    
+    #clickable-links a.clickable-link {
+        text-align: center;
+    }
 }
