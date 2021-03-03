@@ -66,11 +66,14 @@ ul#my-titles li {
 }
 
 /*Display work in a grid*/
-.work-category {
+/*
+work-category {
     display: none;
 }
+*/
 
 .work-wrapper {
+    display: grid;
     margin: 90px 0;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
@@ -83,13 +86,9 @@ ul#my-titles li {
     max-width: 100%;
 }
 
-.work-category.active {
-    display: grid;
-}
 
 /*Styling on work images */
 .work-wrapper div img {
-    display: block;
     width: 100%;
     max-width: 100%;
 }
@@ -104,15 +103,20 @@ section#branding-work {
     padding-top: 0;
 }
 
-.work-category#branding {
-    padding-top: 90px;
+.clickable-link {
+color: #4E98D9;
+padding-right: 20px;
+}
+
+.clickable-link {
+    text-decoration: underline;
 }
 
 @media all and (max-width: 1024px) {
     .work-wrapper {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(300px, auto);
+    grid-auto-rows: minmax(400px, auto);
     }
 }
 
@@ -120,14 +124,14 @@ section#branding-work {
     .work-wrapper {
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(300px, auto);
+    grid-auto-rows: minmax(400px, auto);
 }
 }
 
-@media all and (max-width: 400px) {
+@media all and (max-width: 600px) {
     .work-wrapper {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 10px;
-    grid-auto-rows: minmax(300px, auto);
+    grid-auto-rows: minmax(400px, auto);
 }
 }
