@@ -12,53 +12,114 @@ body {
 .outer-container {
     /*The container fills the window no matter what device its on*/
     height 100vh; 
-    width: 100vw; 
-    display: flex;
+    width: 100%; 
+    display: block;
+    position: relative;
     align-items: center;
     justify-content: center;
+    margin: 90px auto;
 }
 
-.inner-container {
-    width: 100%;
-}
-.logo-container {
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-#logo {
-    width: 12rem;
-    text-align: center;
+.content {
     margin: auto;
-    position: absolute;
-    text-align: center;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
 }
 
-/*Section 1 Changes*/
-#section1-logo {
-    background: #3366CC;
+/*Override top margin on first container, so it sits right at the top */
+#section1-logo.outer-container {
+    margin-top: 0;
+    position: relative;
     height: 100vh;
+    background: #3366CC;
     background: -webkit-linear-gradient(top, #3366CC, #000066);
     background: linear-gradient(top, #3366CC, #000066);
 }
 
-ul#my-titles {
-    color: #fff;
+/*center in container*/
+#section1-logo .content {
     text-align: center;
-    list-style: none;
-    clear: both; 
-    float: none; 
-    width: 100%;
-    padding-left: 0;
+    margin: auto;
     position: absolute;
-    text-align: center;
+    top: 50%;
     left: 50%;
-    transform: translateY(-50%);
-    bottom: 20%;
+    transform: translate(-50%, -50%);
+}
+
+/*fill container */
+#logo {
+    width: 10rem;
+    max-width: 100%;
+}
+
+/*List of my qualifications*/
+ul#my-titles {
+    padding-left: 0;
+}
+ul#my-titles li {
+    color: #fff;
+    width: 100%;
+    list-style: none;
+}
+
+/*Display work in a grid*/
+.work-wrapper {
+    display: none;
+    margin: 90px 0;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(300px, auto);
+    display: -ms-grid;
+    display: -webkit-grid;
+    display: -moz-grid;
+
+    width: 100%;
+    max-width: 100%;
+}
+
+.work-wrapper.active {
+    display: grid;
+}
+
+/*Styling on work images */
+.work-wrapper div img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.work-wrapper div.first {
+    clear: both;
+}
+
+/*Put the padding on the header of branding work, 
+which needs to sit outside the container otherwise it will be considered a grid element */
+section#branding-work {
+    padding-top: 0;
+}
+
+h3#branding-header {
+    padding-top: 90px;
+}
+
+@media all and (max-width: 1024px) {
+    .work-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(300px, auto);
+    }
+}
+
+@media all and (max-width: 768px) {
+    .work-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(300px, auto);
+}
+}
+
+@media all and (max-width: 400px) {
+    .work-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(300px, auto);
+}
 }

@@ -1,3 +1,15 @@
-const h2 = document.createElement('h2');
-h2.textContent = "A website of my personal work";
-document.querySelector('body').appendChild(h2);
+let workCategories = document.getElementsByClassName('work-wrapper');
+let activeCategory = document.getElementsByClassName('active');
+console.log('activeCategory[0]');
+
+function hideAllCategories() {
+    for (var i = 0; i < workCategories.length; i++){
+        workCategories[i].style.display = "none";
+    }
+}
+
+function showActiveCategory() {
+hideAllCategories();
+activeCategory[0].style.display="block";
+}
+
