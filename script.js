@@ -1,5 +1,6 @@
 
-//store all links in a variable
+//store all links in a variableƒ
+
 let allLinks= document.querySelectorAll('.clickable-link');
 
 allLinks.forEach(function(link){
@@ -8,18 +9,17 @@ allLinks.forEach(function(link){
         //Remove active class of previously clicked elements
         const removeActiveClass = document.getElementsByClassName('clickable-link'); 
         const divsToHide = document.getElementsByClassName("all-work"); 
-
+        /*
         for(var i = 0; i < removeActiveClass.length; i++){
             removeActiveClass[i].classList.remove("active");
         }
-
+        */
         //Hide all pieces of work before showing again 
         for(var i = 0; i < divsToHide.length; i++){
             divsToHide[i].style.display = "none";
         }
 
-        //Add active class to clicked element 
-        this.classList.add("active");
+       
 
         //Viable holding divs to show lin the following switch statement, using a 'for' loop
         let divsToShow; 
@@ -32,6 +32,8 @@ allLinks.forEach(function(link){
                 for(var i = 0; i < divsToShow.length; i++) {
                     divsToShow[i].style.display = "block";
                 }
+                 //Add active class to clicked element 
+                     this.classList.add("active");
                 break;
             case 'branding-link':
                 console.log('all-links was selected');
@@ -39,6 +41,8 @@ allLinks.forEach(function(link){
                 for(var i = 0; i < divsToShow.length; i++) {
                     divsToShow[i].style.display = "block";
                 }
+                    //Add active class to clicked element 
+                    this.classList.add("active");
                 break;
 
             case 'illustration-link':
@@ -46,6 +50,8 @@ allLinks.forEach(function(link){
                 for(var i = 0; i < divsToShow.length; i++) {
                     divsToShow[i].style.display = "block";
                 }
+                    //Add active class to clicked element 
+                    this.classList.add("active");
                 break;
 
             case "email-link":
@@ -53,6 +59,8 @@ allLinks.forEach(function(link){
                 for(var i = 0; i < divsToShow.length; i++) {
                     divsToShow[i].style.display = "block";
                 };
+                    //Add active class to clicked element 
+                    this.classList.add("active");
                 break;
 
             case "trade-show-link":
@@ -60,22 +68,10 @@ allLinks.forEach(function(link){
                 for(var i = 0; i < divsToShow.length; i++) {
                     divsToShow[i].style.display = "block";
                 };
+                //Add active class to clicked element 
+                this.classList.add("active");
                 break;
             }
         
             }); 
     });
-
-    
-/*allLinks.addEventListener('click', function(event) {
-    event.preventDefault();
-    alert(this.innerText);
-});*/
-
-// Branding is visible and active by default
-// 1. Click on one of the clickable links
-// 2. Removes "active" status from all the other categories
-// 3. Hides all inactive categories
-// 4. Applies "active" to new clicked on element
-
-//Enlarges clicked on image - if I have time

@@ -8,40 +8,91 @@ body {
     margin: 0;
     padding: 0;
 }
+a {
+    cursor: pointer;
+    color: #02758f;
+    text-align: center;
+}
+
+
+p {
+    margin: auto;
+    margin-bottom: 15px;
+    text-align: center;
+    max-width: 900px; /*so paragraphs aren't too wide and hard to read.*/
+    line-height: 1.5;
+}
+
+h1, h2 {
+    font-size: 40px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+/*Forces an element to take up the height of its child elements*/
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
 
 .outer-container {
     /*The container fills the window no matter what device its on*/
-    height 100vh; 
     width: 100%; 
     display: block;
     position: relative;
     align-items: center;
     justify-content: center;
-    margin: 90px auto;
+    margin: 0 auto;
+    padding: 8rem 0;
 }
 
 .content {
+    max-width: 1200px;
     margin: auto;
+
+}
+/*Navigation Bar*/
+nav {
+    width: 100%;
+    margin: auto;
+    padding: 30px 0;
+    position: fixed;
+    z-index: 1000;
+    background-color: #fff;
 }
 
+nav a {
+    padding: 0 15px;
+    font-weight: 700;
+    color: #3366CC;
+}
 /*Override top margin on first container, so it sits right at the top */
-#section1-logo.outer-container {
+#section1-home.outer-container {
     margin-top: 0;
-    position: relative;
-    height: 100vh;
     background: #3366CC;
     background: -webkit-linear-gradient(top, #3366CC, #000066);
     background: linear-gradient(top, #3366CC, #000066);
+    padding: 0;
+}
+
+.content.logo {
+    padding: 350px 0;
 }
 
 /*center in container*/
-#section1-logo .content {
+#section1-home .content {
     text-align: center;
     margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+}
+
+#section2-bio, #section4-technical {
+    background-color: #d3d3d3;
+}
+
+#section3-work {
+    height: auto;
+    padding-bottom: 5rem;
 }
 
 /*fill container */
@@ -73,6 +124,20 @@ work-category {
 }
 */
 
+#profile-pic {
+    width: 8rem;
+    padding: 30px 0;
+    margin: auto;
+    
+}
+
+#profile-pic img {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+
 #work-wrapper {
     display: grid;
     margin: 90px 0;
@@ -103,22 +168,60 @@ which needs to sit outside the container otherwise it will be considered a grid 
 section#branding-work {
     padding-top: 0;
 }
+#section3-work #clickable-links {
+    margin: auto;
+    max-width: 710px;
+}
 
 #clickable-links a.clickable-link {
-color: #049DBF;
+color: #3366CC;
+font-weight: 700;
 padding-bottom: 5px;
 margin-right: 20px;
 line-height: 2; /*Stops links collapsing into each other if they go onto next line;*/
 }
 
-#clickable-links a.clickable-link:hover {
-    cursor: hand;
-    color: #02758f;
+a.clickable-link:active {
+    border-bottom: solid 3px #3366CC;
 }
-#clickable-links a.clickable-link.active {
-    color:#02758f;
-    border-bottom: solid 3px #02758f;
+
+#section4-technical {
+    clear: both;
 }
+
+#technical-list {
+    column-count: 3;
+    text-align: center;
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/*Allowing the inner content to center;*/
+#section5-contact {
+    width: 100%;
+
+} 
+
+ul#contact-wrapper {
+    text-align: center;
+    padding: 0;
+}
+
+ul#contact-wrapper a {
+    padding: 90px 60px;
+}
+
+footer {
+    background-color: #333;
+    padding: 30px 0;
+}
+
+
+footer p {
+font-size: 16px;
+color: #fff;
+}
+/*RESPONSIVE MEDIA QUERIES*/
 
 @media all and (max-width: 1024px) {
     
@@ -144,12 +247,13 @@ line-height: 2; /*Stops links collapsing into each other if they go onto next li
         grid-auto-rows: minmax(400px, auto);
     }
 
-    #clickable-links {
-        margin: auto;
-        max-width: 80%;
-    }
     
     #clickable-links a.clickable-link {
         text-align: center;
     }
+
+    #technical-list {
+        column-count: 1;
+    }
+    
 }

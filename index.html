@@ -1,55 +1,59 @@
 <!DOCTYPE html>
-<html lang="eng">
+<html lang="en">
     <head>
         <title>Nils Portfolio Website</title>
         <!--Add CSS styles-->
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="Font-Awesome/css/fontawesome.min.css">
-<<<<<<< HEAD
-        <link rel="stylesheet" href="style.css" type="text/css">
 
-=======
-        <link rel="stylesheet" href="style.css">
->>>>>>> d50683a098570969c60ea2de6bde7d0c4211f78f
+        <link rel="stylesheet" href="style.css" type="text/css">
+           
+
+            <script src="https://use.fontawesome.com/a70623012b.js"></script>
+
         
     </head>
     <body>
-        <section id="section1-logo" class="outer-container">
-            <div class="content">
-                
+
+   <!--Container of content houses and centers the main content-->
+
+        <section id="section1-home" class="outer-container">
+            <nav>
+                <div class="content">
+                    <a href="index.html">Home</a>
+                    <a href="#section2-bio">About Me</a>
+                    <a href="#section3-work">My Work</a>
+                    <a href="#section4-technical">My Skills</a>
+                    <a href="#section5-contact">Contact Me</a>
+                </div>
+            </nav>
+            <div class="content logo">
                 <img id="logo" src="images/stacked-name.png" alt="Stacked Name Logo">
                 <div class="my-titles-container">
                 <ul id="my-titles">
                     <li>Software & Website Developer</li>
                     <li>Graphic Designer</li>
-                    <i class="fas fa-chevron-down"></i>
                 </ul>
                 </div>
             </div>
          
         </section>
         
+        
         <section id="section2-bio" class="outer-container">
-            <div id="bio" class="content col-sm-9 col-md-8">
-                <h1>About Me</h1>
-                <p>Well hello there future employers! My name is Nils, I'm a 28-year-old aspiring software developer studying a 5-month full time intensive programming course.</p>
-                <p> I have 2 years' past experience as a web designer and previous knowledge of HTML, CSS and Javascript, which I studied at the University of Canberra. I also have a degree from the same uni in graphic design, where I studied UX design throughout my course and have a good sensibility for aesthetics and layout.</p>
-                <p>In the course, I will learn Ruby, Ruby on Rails, React and gain plenty of experience using the command line and working on Github.</p>
-                <p>I am inspired to solve problems with my programming skills and seeing what's possible.</p>
-                <p>I look forward to the prospect of working together!</p>
-                <p><a id="about-me-link" href="">See my work</a> or drop me a line below:</p>
-                <p>Email Me: <a href="n.vanderw.92@gmail.com">n.vanderw.92@gmail.com</a></p>
-                <p>Mobile: <a href="n.vanderw.92@gmail.com">0418 202 359</a></p>
-            </div>
+            <div class="content">
+                    <h1>About Me</h1>
+                        <div id="profile-pic"><img src="images/profile-pic.jpg" alt="Picture of Nils"></div>
+                        <p>Well hello there future employers! My name is Nils, I'm a 28-year-old aspiring software developer studying a 5-month full time intensive programming course.</p>
+                        <p> I have 2 years' past experience as a web designer and previous knowledge of HTML, CSS and Javascript, which I studied at the University of Canberra. I also have a degree from the same uni in graphic design, where I studied UX design throughout my course and have a good sensibility for aesthetics and layout.</p>
+                        <p>In the course, I will learn Ruby, Ruby on Rails, React and gain plenty of experience using the command line and working on Github.</p>
+                        <p>I am inspired to solve problems with my programming skills and seeing what's possible.</p>
+                        <p>I look forward to the prospect of working together!</p>
+                </div>
         </section>
         
         <section id="section3-work" class="outer-container">
-            
-       
-
-            <div id="my-work" class="content col-xs-12 col-sm-10 col-md-8">
                 <h2>My Work</h2>
                 <div id="clickable-links">
                         <a id="all-links" class="clickable-link active">All</a>
@@ -57,9 +61,10 @@
                         <a id="illustration-link" class="clickable-link">Illustration</a>
                         <a id="email-link" class="clickable-link">Email Marketing</a>
                         <a id="trade-show-link" class="clickable-link">Trade Show Artwork</a>
+
                  </div>
                 <!--My Branding Work-->
-                    <section id="work-wrapper">
+          <div id="work-wrapper" class="clearfix">
                         <div class="branding all-work"><img src="images/bookworm-logo-square.png" alt="Pink bookworm logo"></div>
                         <div class="branding all-work"><img src="images/bookworm-mockup.png" alt="Pink bookworm bookmarks"></div>
                         <div class="branding all-work"><img src="images/wenatchee-logo-square.png" alt="Wenatchee National Park logo"></div>
@@ -71,28 +76,61 @@
                         <div class="illustration all-work"><img src="images/Sydney-Postcard.jpg" alt="Sydney Postcard"></div>
                         <div class="illustration all-work"><img src="images/sattelite-sweater.png" alt="Satellite Sweater"></div>
                         <div class="illustration all-work"><img src="images/gin-fridays.png" alt="T.G.I.F - gin time!"></div>
-                        <div class="illustration all-work"><img src="images/Hot-Cross-Buns.png" alt="Hot cross buns at grands"></div>
-                        <div class="illustration branding all-work"><img src="images/Isolotion-Branding.png" alt="Isolotion Branding"></div>
+                        <div class="illustration all-work"><img src="images/Hot-Cross-Buns.png" alt="Hot cross buns at Gran's poster"></div>
+                        <div class="illustration branding all-work"><img src="images/Iso-Lotion-Branding.jpg" alt="Iso-Lotion Branding"></div>
                         <div class="illustration all-work"><img src="images/Weekend-sesh.jpg" alt="Weekend park drinking session"></div>
                         <div class="illustration branding all-work"><img src="images/Craft-Crab.jpg" alt="Hypothetical beer label"></div>
                         <div class="illustration branding all-work"><img src="images/Craft-Crab-back.jpg" alt="Hypothetical beer label back side"></div>
                         <div class="edm all-work"><img src="images/Largo-Email.png" alt="Nike Email Design - Entity Brands"></div>
-                        <div class="edm all-work"><img src="images/Springfield-Email.png" alt="Springfield Jacket Email Design - Chef Works Australia"></div>
                         <div class="edm all-work"><img src="images/Nike-Email.jpg" alt="Nike Email Design - Entity Brands"></div>
                         <div class="edm all-work"><img src="images/The-North-Face-Email-Gif.gif" alt="The North Face Email Design - Entity Brands"></div>
                         <div class="edm all-work"><img src="images/Comfort-Kitchen-Email-Design_01.png" alt="Comfort in the Kitchen Email Design  - Chef Works Australia"></div>
-                        <div class="edm all-work"><img src="images/Medford-Email copy.png" alt="Medford Aprons Email Design  - Chef Works Australia"></div>
-                        <div class="edm all-work"><img src="images/Olympia-Aprons-Email.png" alt="Olympia Aprons Email Design  - Chef Works Australia"></div>
+                        <div class="edm all-work"><img src="images/Medford-Email.png" alt="Medford Aprons Email Design  - Chef Works Australia"></div>
+                        <div class="edm all-work"><img src="images/Olympia-Aprons-Email.jpg" alt="Olympia Aprons Email Design  - Chef Works Australia"></div>
                         <div class="trade-show all-work"><img src="images/Trade-Show-Banner.png" alt="Trade Show Banner - Entity Brands"></div>
-                    </section>
+                        <div class="trade-show all-work"><img src="images/Trade-Show-Banners-2.png" alt="Trade Show Banner - LiteracyPlanet"></div>
+          </div>
            <!--Clickable span elements-->
            
         </section>
 
 
+        <section id="section4-technical" class="outer-container">
+            <h2>Technical Capabilities</h2>
+            <div class="content">
+            <ul id="technical-list">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Javascript/JQuery</li>
+                <li>GitHub</li>
+                <li>Adobe Photoshop</li>
+                <li>Adobe Illustrator</li>
+                <li>Adobe InDesign</li>
+                <li>Adobe Lightroom</li>
+                <li>Corel Draw </li>
+                <li>MailChimp</li>
+                <li>HubSpot</li>
+                <li>Neto</li>
+            </ul>
+            </div>
+        </section>
+
+        <section id="section5-contact" class="outer-container">
+            <h2>Find me at</h2>
+            <div class="content">
+            <ul id="contact-wrapper">
+                  <a href="mailto:n.vanderw.92@gmail.com" target="blank">Email Me</a></span>
+                  <a href="http://linkedin.com/in/nilsvanderwerf/" target="_blank">LinkedIn</a>
+                  <a href="http://github.com/nils-vanderwerf" target="_blank">GitHub</a>
+            </ul>
+        </div>
+        </section>
+
+        <footer>
+            <p>Copyright Nils van der Werf © 2021.</p> <p> Site design and development by Nils van der Werf. </p>
+          </footer>
            
         </div>
-        
         <script src="script.js"></script>
     </body>
 </html>
