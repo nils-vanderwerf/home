@@ -181,7 +181,7 @@ margin-right: 20px;
 line-height: 2; /*Stops links collapsing into each other if they go onto next line;*/
 }
 
-a.clickable-link:active {
+a.clickable-link.active {
     border-bottom: solid 3px #3366CC;
 }
 

@@ -5,9 +5,14 @@ let allLinks= document.querySelectorAll('.clickable-link');
 
 allLinks.forEach(function(link){
     link.addEventListener('click', function(event) {
+
+    let current = document.getElementsByClassName("active");
+    //Remove active class of previously clicked elements
+    console.log(current);
+    current[0].classList.remove('active')
+
+    this.classList.add('active');  
       
-        //Remove active class of previously clicked elements
-        const removeActiveClass = document.getElementsByClassName('clickable-link'); 
         const divsToHide = document.getElementsByClassName("all-work"); 
         /*
         for(var i = 0; i < removeActiveClass.length; i++){
@@ -21,7 +26,8 @@ allLinks.forEach(function(link){
 
        
 
-        //Viable holding divs to show lin the following switch statement, using a 'for' loop
+        //Initialize variable holding divs to show in the following switch statement, using a 'for' loop
+        //Intiallize outsize switch so it's available in every case
         let divsToShow; 
 
         //Get the id of the element that was clicked on
