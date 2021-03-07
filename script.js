@@ -14,11 +14,11 @@ allLinks.forEach(function(link){
     this.classList.add('active');  
       
         const divsToHide = document.getElementsByClassName("all-work"); 
-        /*
+        
         for(var i = 0; i < removeActiveClass.length; i++){
             removeActiveClass[i].classList.remove("active");
         }
-        */
+        
         //Hide all pieces of work before showing again 
         for(var i = 0; i < divsToHide.length; i++){
             divsToHide[i].style.display = "none";
