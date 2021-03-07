@@ -66,6 +66,7 @@ nav a {
     padding: 0 15px;
     font-weight: 700;
     color: #3366CC;
+    text-decoration: none;
 }
 /*Override top margin on first container, so it sits right at the top */
 #section1-home.outer-container {
