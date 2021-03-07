@@ -14,9 +14,9 @@ allLinks.forEach(function(link){
     this.classList.add('active');  
       
         const divsToHide = document.getElementsByClassName("all-work"); 
-        
-        for(var i = 0; i < removeActiveClass.length; i++){
-            removeActiveClass[i].classList.remove("active");
+
+        for(var i = 0; i < allLinks.length; i++){
+            allLinks[i].classList.remove("active");
         }
         
         //Hide all pieces of work before showing again 
